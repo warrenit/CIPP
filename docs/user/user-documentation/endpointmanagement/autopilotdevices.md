@@ -1,11 +1,8 @@
 ---
-id: autopilotdevices
-title: Autopilot Devices
-slug: /usingcipp/endpointmanagement/autopilotdevices
 description: Manage Autopilot devices across your Microsoft 365 tenants.
 ---
 
-# Autopilot Devices
+# Add Device
 
 The following two pages in CIPP give you the ability to manage Autopilot devices:
 
@@ -25,25 +22,18 @@ As a partner, you can register devices to Windows Autopilot using any one of the
 
 This API does not directly return data to CIPP, and thus can incorrectly report the upload has failed.
 
+### API Calls
 
+The following APIs are called on this page:
 
-### List Devices
+### API Calls
 
-This page lists all devices registered for Autopilot.
+The following APIs are called on this page:
 
-#### Details <a href="#listdevices-details" id="listdevices-details"></a>
+{% swagger src="../../.gitbook/assets/openapicipp.json" path="/AddAPDevice" method="post" %}
+[openapicipp.json](../../.gitbook/assets/openapicipp.json)
+{% endswagger %}
 
-| Fields       | Description                                     |
-| ------------ | ----------------------------------------------- |
-| Display Name | The display name of the device.                 |
-| Serial       | The serial number of the device.                |
-| Model        | The model of the device.                        |
-| Manufacturer | The manufacturer of the device.                 |
-| Group Tag    | The autopilot group tag assigned to the device. |
-| Enrollment   | The enrollment status of the device.            |
+### Feature Requests / Ideas
 
-#### Actions <a href="#listdevices-actions" id="listdevices-actions"></a>
-
-* Delete Device - _This deletes the autopilot enrollment for the device._
-
-#### &#x20;<a href="#listdevices-knownissues" id="listdevices-knownissues"></a>
+Please raise any [feature requests](https://github.com/KelvinTegelaar/CIPP/issues/new?assignees=\&labels=\&template=feature\_request.md\&title=FEATURE+REQUEST%3A+) on GitHub.

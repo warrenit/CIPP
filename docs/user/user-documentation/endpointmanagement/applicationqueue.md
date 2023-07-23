@@ -1,11 +1,8 @@
 ---
-id: applicationqueue
-title: List Application Queue
-slug: /usingcipp/endpointmanagement/applicationqueue
 description: Show applications queued for deployment to your tenants.
 ---
 
-# List Application Queue
+# Application Queue
 
 You can view a list of all applications queued for deployment to your tenants, any application listed here is going to be deployed to your tenants. The application will be removed from this list after deployment, unless it is deployed to "All Tenants"
 
@@ -18,4 +15,14 @@ You can view a list of all applications queued for deployment to your tenants, a
 | Install Command    | The command to install the application.    |
 | Assigned to Groups | List the groups assignments for the app.   |
 
-###
+### API Calls
+
+The following APIs are called on this page:
+
+{% swagger src="../../.gitbook/assets/openapicipp.json" path="/ListApplicationQueue" method="get" %}
+[openapicipp.json](../../.gitbook/assets/openapicipp.json)
+{% endswagger %}
+
+### Feature Requests / Ideas
+
+Please raise any [feature requests](https://github.com/KelvinTegelaar/CIPP/issues/new?assignees=\&labels=\&template=feature\_request.md\&title=FEATURE+REQUEST%3A+) on GitHub.

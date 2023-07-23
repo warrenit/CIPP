@@ -1,11 +1,8 @@
 ---
-id: addchocoapp
-title: Add Chocolatey App
-slug: /usingcipp/endpointmanagement/addchocoapp
 description: Deploy applications using the Chocolatey package manager.
 ---
 
-# Add Chocolatey App
+# Add Choco App
 
 You can add an application deployment utilising [Chocolatey](https://chocolatey.org/) by executing this wizard. The wizard guides you through the steps and provides the ability for you to deploy an app to many tenants at the same time.
 
@@ -21,4 +18,14 @@ If you are unsure or don't trust the `IntuneWin` file, you have the option to re
 
 It's strongly recommended that you download, test, and view the contents of the intunewin file.
 
-###
+### API Calls
+
+The following APIs are called on this page:
+
+{% swagger src="../../.gitbook/assets/openapicipp.json" path="/AddChocoApp" method="post" %}
+[openapicipp.json](../../.gitbook/assets/openapicipp.json)
+{% endswagger %}
+
+### Feature Requests / Ideas
+
+Please raise any [feature requests](https://github.com/KelvinTegelaar/CIPP/issues/new?assignees=\&labels=\&template=feature\_request.md\&title=FEATURE+REQUEST%3A+) on GitHub.

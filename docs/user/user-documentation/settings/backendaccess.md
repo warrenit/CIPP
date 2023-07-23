@@ -1,7 +1,4 @@
 ---
-id: backendaccess
-title: Backend Access
-slug: /usingcipp/settings/backendaccess
 description: Get information on and access to the backend services powering CIPP.
 ---
 
@@ -14,8 +11,6 @@ CIPP also includes a quicker way to jump to the correct locations via the Settin
 {% hint style="info" %}
 Hosted clients can use the backend management system at [management.cipp.app](https://management.cipp.app)
 {% endhint %}
-
-
 
 ### Details
 
@@ -35,3 +30,14 @@ The overview page is where you can stop the API, or restart it. The configuratio
 
 Custom domains brings you to the location where you can change the custom domain. Role management is where you can invite users, and set the roles for users.
 
+### API Calls
+
+The following APIs are called on this page:
+
+{% swagger src="../../.gitbook/assets/openapicipp.json" path="/ExecBackendURLs" method="get" %}
+[openapicipp.json](../../.gitbook/assets/openapicipp.json)
+{% endswagger %}
+
+### Feature Requests / Ideas
+
+Please raise any [feature requests](https://github.com/KelvinTegelaar/CIPP/issues/new?assignees=\&labels=\&template=feature\_request.md\&title=FEATURE+REQUEST%3A+) on GitHub.

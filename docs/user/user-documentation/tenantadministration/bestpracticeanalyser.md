@@ -1,7 +1,4 @@
 ---
-id: bestpracticeanalyser
-title: Best Practice Analyser
-slug: /usingcipp/tenantadministration/bestpracticeanalyser
 description: Audit your tenant against best practices.
 ---
 
@@ -119,3 +116,14 @@ Partial Data If you are only seeing partial data after waiting a while for the d
 You can test this with the Access Check by navigating to **CIPP Settings > Configuration Settings > Tenant Access Check**.
 {% endhint %}
 
+### API Calls
+
+The following APIs are called on this page:
+
+{% swagger src="../../.gitbook/assets/openapicipp.json" path="/BestPracticeAnalyser_List" method="get" %}
+[openapicipp.json](../../.gitbook/assets/openapicipp.json)
+{% endswagger %}
+
+### Feature Requests / Ideas
+
+Please raise any [feature requests](https://github.com/KelvinTegelaar/CIPP/issues/new?assignees=\&labels=\&template=feature\_request.md\&title=FEATURE+REQUEST%3A+) on GitHub.

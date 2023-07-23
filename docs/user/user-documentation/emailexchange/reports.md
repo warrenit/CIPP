@@ -1,31 +1,19 @@
 ---
-id: reports
-title: Reports
-slug: /usingcipp/emailexchange/reports
 description: Reports available within CIPP - E-mail & Exchange
 ---
 
-# Reports
+# Shared Mailbox with Enabled Account
 
-Many Exchange reports exist in CIPP, More reports can be generated using the Graph Explorer see below for further details:
+Reports on all mailboxes that are shared, and also have an enabled user account.
 
-All reports feature filtering and the ability to export to a PDF or CSV file.
+### API Calls
 
-### Mailbox Statistics
+The following APIs are called on this page:
 
-This report lists all mailboxes and pulls activity date, total space used, number of items in the mailbox and, the status of archiving.
+{% swagger src="../../.gitbook/assets/openapicipp.json" path="/ListSharedMailboxAccountEnabled" method="get" %}
+[openapicipp.json](../../.gitbook/assets/openapicipp.json)
+{% endswagger %}
 
-Mailboxes using 80% to 90% of their quota show with an orange highlight. Mailboxes using 90% to 100% of their quota show with a red highlight.
+### Feature Requests / Ideas
 
-### Mailbox Client Access Settings
-
-This report lists all users and the status of various Client Access Settings on their mailbox, such as IMAP / OWA / POP.
-
-### Message Trace
-
-Message Trace provides the ability for you to trace an e-mail instantly from to any recipient, or any sender over the last 10 days (max).
-
-### Phishing Policies
-
-This report provides the ability for you to view Phishing Policies for the selected tenant and whether they're enabled, have excluded senders or domains and the last amended date.
-
+Please raise any [feature requests](https://github.com/KelvinTegelaar/CIPP/issues/new?assignees=\&labels=\&template=feature\_request.md\&title=FEATURE+REQUEST%3A+) on GitHub.
