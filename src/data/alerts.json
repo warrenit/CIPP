@@ -7,7 +7,11 @@
   {
     "name": "MFAAdmins",
     "label": "Alert on admins without any form of MFA",
-    "recommendedRunInterval": "1d"
+    "recommendedRunInterval": "1d",
+    "requiresInput": true,
+    "inputType": "switch",
+    "inputLabel": "Include disabled admin accounts?",
+    "inputName": "IncludeDisabled"
   },
   {
     "name": "NewMFADevice",
@@ -492,7 +496,7 @@
   {
     "name": "QuarantineReleaseRequests",
     "label": "Alert on quarantine release requests",
-    "recommendedRunInterval": "30m",
+    "recommendedRunInterval": "1h",
     "description": "Monitors for user requests to release quarantined messages and provides a CIPP-native alternative to the external email forwarding method. This helps MSPs maintain secure configurations while getting timely notifications about quarantine activity. Links to the tenant's quarantine page are provided in alerts."
   },
   {
