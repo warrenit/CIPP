@@ -99,27 +99,6 @@ const Page = () => {
     name: "user",
   });
 
-  // Watch navigation settings and apply immediately (device-local, no server save needed)
-  const watchedBookmarkSidebar = useWatch({ control: formcontrol.control, name: "bookmarkSidebar" });
-  const watchedBookmarkPopover = useWatch({ control: formcontrol.control, name: "bookmarkPopover" });
-  const watchedBookmarkReorderMode = useWatch({ control: formcontrol.control, name: "bookmarkReorderMode" });
-
-  useEffect(() => {
-    const updates = {};
-    if (watchedBookmarkSidebar !== undefined && watchedBookmarkSidebar !== settings.bookmarkSidebar) {
-      updates.bookmarkSidebar = watchedBookmarkSidebar;
-    }
-    if (watchedBookmarkPopover !== undefined && watchedBookmarkPopover !== settings.bookmarkPopover) {
-      updates.bookmarkPopover = watchedBookmarkPopover;
-    }
-    if (watchedBookmarkReorderMode !== undefined && watchedBookmarkReorderMode !== settings.bookmarkReorderMode) {
-      updates.bookmarkReorderMode = watchedBookmarkReorderMode;
-    }
-    if (Object.keys(updates).length > 0) {
-      settings.handleUpdate(updates);
-    }
-  }, [watchedBookmarkSidebar, watchedBookmarkPopover, watchedBookmarkReorderMode]);
-
   // Update form when initial user type is determined
   useEffect(() => {
     if (initialUserType !== null && auth.data?.clientPrincipal?.userDetails) {
@@ -335,7 +314,7 @@ const Page = () => {
                     <CippPropertyListCard
                       layout="two"
                       showDivider={false}
-                      title="Navigation Settings - Per Device (Local Storage)"
+                      title="Navigation Settings"
                       propertyItems={[
                         {
                           label: "Show Sidebar Bookmarks",
@@ -369,6 +348,16 @@ const Page = () => {
                                 { value: "arrows", label: "Arrow Buttons" },
                                 { value: "drag", label: "Drag and Drop" },
                               ]}
+                            />
+                          ),
+                        },
+                        {
+                          label: "Compact Navigation",
+                          value: (
+                            <CippFormComponent
+                              type="switch"
+                              name="compactNav"
+                              formControl={formcontrol}
                             />
                           ),
                         },
