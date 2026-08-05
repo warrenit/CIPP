@@ -585,7 +585,7 @@ export const nativeMenuItems = [
       },
       {
         title: 'Device Management',
-        permissions: ['Endpoint.MEM.*'],
+        permissions: ['Endpoint.MEM.*', 'Endpoint.Device.*'],
         items: [
           {
             title: 'Devices',
@@ -697,6 +697,11 @@ export const nativeMenuItems = [
         permissions: ['Sharepoint.Admin.*'],
       },
       {
+        title: 'SharePoint Templates',
+        path: '/teams-share/sharepoint-templates',
+        permissions: ['Sharepoint.Admin.*'],
+      },
+      {
         title: 'Deleted Sites',
         path: '/teams-share/deleted-sites',
         permissions: ['Sharepoint.Admin.*'],
@@ -704,6 +709,11 @@ export const nativeMenuItems = [
       {
         title: 'Sharing Report',
         path: '/teams-share/sharing-report',
+        permissions: ['Sharepoint.Site.*'],
+      },
+      {
+        title: 'Permissions Report',
+        path: '/teams-share/permissions-report',
         permissions: ['Sharepoint.Site.*'],
       },
       {
@@ -821,7 +831,7 @@ export const nativeMenuItems = [
       },
       {
         title: 'Transport',
-        permissions: ['Exchange.TransportRule.*'],
+        permissions: ['Exchange.TransportRule.*', 'Exchange.Connector.*'],
         items: [
           {
             title: 'Transport rules',
@@ -849,7 +859,7 @@ export const nativeMenuItems = [
       },
       {
         title: 'Spamfilter',
-        permissions: ['Exchange.SpamFilter.*'],
+        permissions: ['Exchange.SpamFilter.*', 'Exchange.ConnectionFilter.*'],
         items: [
           {
             title: 'Spamfilter',
@@ -882,7 +892,7 @@ export const nativeMenuItems = [
       },
       {
         title: 'Resource Management',
-        permissions: ['Exchange.Equipment.*'],
+        permissions: ['Exchange.Equipment.*', 'Exchange.Room.*'],
         items: [
           {
             title: 'Equipment',
